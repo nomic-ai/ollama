@@ -847,7 +847,6 @@ func GetModelInfo(req api.ShowRequest) (*api.ShowResponse, error) {
 		return nil, err
 	}
 	delete(kvData, "general.name")
-	delete(kvData, "tokenizer.chat_template")
 	resp.ModelInfo = kvData
 
 	if len(m.ProjectorPaths) > 0 {
